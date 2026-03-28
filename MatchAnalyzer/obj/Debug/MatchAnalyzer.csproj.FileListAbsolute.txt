@@ -1,0 +1,11 @@
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\bin\Debug\MatchAnalyzer.exe.config
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\bin\Debug\MatchAnalyzer.exe
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\bin\Debug\MatchAnalyzer.pdb
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\obj\Debug\MatchAnalyzer.csproj.AssemblyReference.cache
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\obj\Debug\MatchAnalyzer.csproj.CoreCompileInputs.cache
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\obj\Debug\MatchAnalyzer.exe
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\obj\Debug\MatchAnalyzer.pdb
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\bin\Debug\Discord Webhook.xml
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\obj\Debug\MatchAna.67A27453.Up2Date
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\obj\Debug\MatchAnalyzer.csproj.Fody.CopyLocal.cache
+C:\Users\noman\source\repos\MatchAnalyzer\MatchAnalyzer\obj\Debug\MatchAnalyzer.csproj.Fody.RuntimeCopyLocal.cache

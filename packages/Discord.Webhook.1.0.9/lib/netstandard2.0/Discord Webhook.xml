@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Discord Webhook</name>
+    </assembly>
+    <members>
+        <member name="T:Discord.Webhook.Colors">
+            <summary>
+                List of pre-defined colors to use when building an embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Red">
+            <summary>
+                Represents the RGB color '231, 76, 70' or HEX color '#e74c3c'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.DarkRed">
+            <summary>
+                Represents the RGB color '153, 45, 34' or HEX color '#992d22'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Purple">
+            <summary>
+                Represents the RGB color '155, 89, 182' or HEX color '#9b59b6'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Green">
+            <summary>
+                Represents the RGB color '46, 204, 113' or HEX color '#2ecc71'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Orange">
+            <summary>
+                Represents the RGB color '230, 126, 34' or HEX color '#e67e22'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Grey">
+            <summary>
+                Represents the RGB color '179, 177, 175' or HEX color '#b3b1af'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Blue">
+            <summary>
+                Represents the RGB color '32, 102, 148' or HEX color '#206694'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.LightBlue">
+            <summary>
+                Represents the RGB color '135, 206, 250' or HEX color '#87cefa'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Yellow">
+            <summary>
+                Represents the RGB color '255, 255, 0' or HEX color '#ffff00'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Violet">
+            <summary>
+                Represents the RGB color '64, 224, 208' or HEX color '#ee82ee'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Brown">
+            <summary>
+                Represents the RGB color '160, 82, 45' or HEX color '#a0522d'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Magenta">
+            <summary>
+                Represents the RGB color '255, 0, 255' or HEX color '#ff00ff'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.Black">
+            <summary>
+                Represents the RGB color '0, 0, 0' or HEX color '#ffffff'
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Colors.White">
+            <summary>
+                Represents the RGB color '255, 255, 255' or HEX color '#000000'
+            </summary>
+        </member>
+        <member name="T:Discord.Webhook.EmbedBuilder">
+            <summary>
+                The embed builder class, this allows easy tooling to build embeds using the Fluent design pattern
+            </summary>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.AddField(System.String,System.Object,System.Boolean)">
+            <summary>
+                Adds a field to the embed
+            </summary>
+            <param name="name">The title of the field</param>
+            <param name="value">The content in the field</param>
+            <param name="inline">Whether to inline the field</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithColor(Discord.Webhook.DColor)">
+            <summary>
+                Sets color of the embed
+            </summary>
+            <param name="color">The <see cref="T:Discord.Webhook.DColor" /> to set the embed to</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithTitle(System.String)">
+            <summary>
+                Sets the title of the embed
+            </summary>
+            <param name="title">The title to set on the embed</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithAuthor(System.String,System.String)">
+            <summary>
+                Sets the author field of the embed
+            </summary>
+            <param name="name">The name of the author</param>
+            <param name="iconUrl">The URL pointing to the icon of the author</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithDescription(System.String)">
+            <summary>
+                Sets the description of the embed
+            </summary>
+            <param name="description">The description to set on the embed</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithImage(System.String)">
+            <summary>
+                Sets the URL pointing to the image to show on the embed
+            </summary>
+            <param name="imageUrl">The URL pointing to the image to put on the embed</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithThumbnail(System.String)">
+            <summary>
+                Sets the thumbnail image URL, the URL should point to the image that you want to use
+            </summary>
+            <param name="thumbnailUrl">The URL of the thumbnail</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithFooter(System.String,System.String)">
+            <summary>
+                Set the footer of the embed
+            </summary>
+            <param name="text">The text to set on the footer</param>
+            <param name="iconUrl">The icon URL to set beside the text on the footer</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithUrl(System.String)">
+            <summary>
+                Sets the URL of the embed, this appears on the embed title as a hyperlink to the set URL
+            </summary>
+            <param name="url">The URL to set on the embed</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithVideo(Discord.Webhook.Video)">
+            <summary>
+                Sets a video on the embed using a <see cref="T:Discord.Webhook.Video" />
+            </summary>
+            <param name="video">The <see cref="T:Discord.Webhook.Video" /> which represents the media to show on the embed</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithVideo(System.String)">
+            <summary>
+                Sets a video on the embed using a URL
+            </summary>
+            <param name="videoUrl">The URL which points to the video to show</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.WithProvider(Discord.Webhook.Provider)">
+            <summary>
+                Sets provider to the embed
+            </summary>
+            <param name="provider">The provider to set on the embed</param>
+            <returns>The updated embed builder</returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.AddFieldsRange(System.Collections.Generic.IEnumerable{Discord.Webhook.Field})">
+            <summary>
+                Adds a collection of fields to the embed
+            </summary>
+            <param name="fields">The new fields to add to the embed</param>
+            <returns>The updated <see cref="T:Discord.Webhook.EmbedBuilder"/></returns>
+        </member>
+        <member name="M:Discord.Webhook.EmbedBuilder.Build">
+            <summary>
+                Builds the <see cref="T:Discord.Webhook.EmbedBuilder" /> and converts it to a <see cref="T:Discord.Webhook.Embed" />
+            </summary>
+            <returns>The newly constructed embed</returns>
+        </member>
+        <member name="T:Discord.Webhook.Exceptions.DiscordWebhookException">
+            <summary>
+                Thrown when webhook execution fails, the message contains the actual error thrown by Discord
+            </summary>
+        </member>
+        <member name="M:Discord.Webhook.Exceptions.DiscordWebhookException.#ctor(Discord.Webhook.Models.DiscordError)">
+            <summary>
+                Constructs a <see cref="T:Discord.Webhook.Exceptions.DiscordWebhookException" />
+            </summary>
+            <param name="error">The error thrown by Discord</param>
+        </member>
+        <member name="M:Discord.Webhook.Exceptions.DiscordWebhookException.#ctor(System.String)">
+            <summary>
+                Constructs a <see cref="T:Discord.Webhook.Exceptions.DiscordWebhookException" />
+            </summary>
+            <param name="message">The fallback string message</param>
+        </member>
+        <member name="M:Discord.Webhook.Extensions.ToDColor(System.Drawing.Color)">
+            <summary>
+                Converts a <see cref="T:System.Drawing.Color" /> to a <see cref="T:Discord.Webhook.DColor" /> to be used in an embed
+            </summary>
+            <param name="color">The color to convert</param>
+            <returns>The converted color</returns>
+        </member>
+        <member name="M:Discord.Webhook.Extensions.ValidateWebhookUsername(System.String)">
+            <summary>
+                Validates that a username passes the Discord validation standards
+            </summary>
+            <param name="u">The username to validate</param>
+            <exception cref="T:System.ArgumentException">Thrown when the validation fails</exception>
+        </member>
+        <member name="T:Discord.Webhook.Models.DiscordError">
+            <summary>
+                Represents an error thrown by Discord
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Models.DiscordError.code">
+            <summary>
+                The error code thrown by Discord
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Models.DiscordError.message">
+            <summary>
+                The (hopefully) friendly message detailing as to why the request failed
+            </summary>
+        </member>
+        <member name="T:Discord.Webhook.JsonSerializer`1">
+            <summary>
+                The main JSON serializer for the library
+            </summary>
+            <typeparam name="TType">The type to be serializing the responses to</typeparam>
+        </member>
+        <member name="M:Discord.Webhook.JsonSerializer`1.Serialize(`0)">
+            <summary>
+                Serializes an object to JSON
+            </summary>
+        </member>
+        <member name="M:Discord.Webhook.JsonSerializer`1.Deserialize(System.String)">
+            <summary>
+                Deserializes an object from JSON
+            </summary>
+        </member>
+        <member name="T:Discord.Webhook.Webhook">
+            <summary>
+                The class that handles sending requests to the Discord webhook
+            </summary>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+                Constructs a new Discord webhook object
+            </summary>
+            <exception cref="T:System.ArgumentException">
+                Thrown when one of the arguments provided does not match validation rules set at
+                Discord's end, for example the username cannot contain 'Discord'.
+            </exception>
+            <param name="webhookUrl">The Discord webhook URL</param>
+            <param name="username">
+                The username the webhook will send with, if its null defaults to what was assigned in the webhook
+                menu on Discord
+            </param>
+            <param name="avatarUrl">
+                The URL that points to the avatar image the webhook will use, if its null defaults to what was assigned in the
+                webhook menu on Discord
+            </param>
+            <param name="threadName">The name of the thread to put the webhook message in</param>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.SendAsync(System.String,Discord.Webhook.WebhookObject,System.String,System.String,System.String)">
+            <summary>
+                Constructs a new Discord webhook object and immediately sends the request, useful for one-time webhook requests
+            </summary>
+            <exception cref="T:Discord.Webhook.Exceptions.DiscordWebhookException">Thrown when Discord returns an error, the message contains the details</exception>
+            <exception cref="T:System.ArgumentException">
+                Thrown when one of the arguments provided does not match validation rules set at
+                Discord's end, for example the username cannot contain 'Discord'.
+            </exception>
+            <param name="webhookUrl">The Discord webhook URL</param>
+            <param name="obj">The webhook object to send to the webhook URL</param>
+            <param name="username">
+                The username the webhook will send with, if its null defaults to what was assigned in the webhook
+                menu on Discord
+            </param>
+            <param name="avatarUrl">
+                The URL that points to the avatar image the webhook will use, if its null defaults to what was assigned in the
+                webhook menu on Discord
+            </param>
+            <param name="threadName">The name of the thread to put the webhook message in</param>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.ExecuteAsync(System.Net.Http.HttpContent,System.Threading.CancellationToken)">
+            <summary>
+                Executes the Discord webhook request
+            </summary>
+            <param name="content">The content to send to Discord</param>
+            <param name="cancellationToken">The cancellation token</param>
+            <exception cref="T:Discord.Webhook.Exceptions.DiscordWebhookException">Thrown when Discord returns an error, the message contains the details</exception>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.SetMessageArguments(Discord.Webhook.WebhookObject)">
+            <summary>
+                Sets the message arguments for a <see cref="T:Discord.Webhook.WebhookObject" />, this includes the username, avatar URL and thread
+                name
+            </summary>
+            <param name="obj">The webhook object to set the arguments for</param>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.GetMessageBody(System.String)">
+            <summary>
+                Gets the message body for a simple text-based message (no embeds)
+            </summary>
+            <param name="message">The message content to set</param>
+            <returns>The new <see cref="T:System.Collections.Generic.Dictionary`2" /> ready for serialization</returns>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.Send(System.String)">
+            <summary>
+                Sends a message to the Discord webhook synchronously
+            </summary>
+            <exception cref="T:Discord.Webhook.Exceptions.DiscordWebhookException">Thrown when Discord returns an error, the message contains the details</exception>
+            <param name="message">The string message to send to the webhook</param>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.Send(Discord.Webhook.WebhookObject)">
+            <summary>
+                Sends a webhook object to the Discord webhook synchronously
+            </summary>
+            <exception cref="T:Discord.Webhook.Exceptions.DiscordWebhookException">Thrown when Discord returns an error, the message contains the details</exception>
+            <param name="obj">The object to send to the webhook</param>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.Delete">
+            <summary>
+                Deletes the webhook
+            </summary>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.SendAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+                Sends a message to the Discord webhook asynchronously
+            </summary>
+            <param name="message">The string message to send to the webhook</param>
+            <param name="cancellationToken">The cancellation token</param>
+            <exception cref="T:Discord.Webhook.Exceptions.DiscordWebhookException">Thrown when Discord returns an error, the message contains the details</exception>
+            <returns>A <see cref="T:System.Threading.Tasks.Task" /> representing the status of the operation</returns>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.SendAsync(Discord.Webhook.WebhookObject,System.Threading.CancellationToken)">
+            <summary>
+                Sends a webhook object to the Discord webhook asynchronously
+            </summary>
+            <param name="obj">The object to send to the webhook</param>
+            <param name="cancellationToken">The cancellation token</param>
+            <exception cref="T:Discord.Webhook.Exceptions.DiscordWebhookException">Thrown when Discord returns an error, the message contains the details</exception>
+            <returns>A <see cref="T:System.Threading.Tasks.Task" /> representing the status of the operation</returns>
+        </member>
+        <member name="M:Discord.Webhook.Webhook.DeleteAsync(System.Threading.CancellationToken)">
+            <summary>
+                Deletes the webhook asynchronously
+            </summary>
+            <param name="cancellationToken">The cancellation token</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task" /> representing the status of the operation</returns>
+        </member>
+        <member name="T:Discord.Webhook.WebhookObject">
+            <summary>
+                The webhook message object, allows you to set plaintext messages, images or embeds
+            </summary>
+        </member>
+        <member name="M:Discord.Webhook.WebhookObject.#ctor">
+            <summary>
+                Just a basic constructor
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.WebhookObject.content">
+            <summary>
+                The message of the embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.WebhookObject.username">
+            <summary>
+                the username you shouldn't be able to see this
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.WebhookObject.avatar_url">
+            <summary>
+                the avatar_url you shouldn't be able to see this
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.WebhookObject.thread_name">
+            <summary>
+                The name of thread to create (requires the webhook channel to be a forum channel)
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.WebhookObject.tts">
+            <summary>
+                will the content be read out
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.WebhookObject.embeds">
+            <summary>
+                the embeds to send with the webhook there is a max of 25
+            </summary>
+        </member>
+        <member name="M:Discord.Webhook.WebhookObject.ToString">
+            <summary>
+                converts the <see cref="T:Discord.Webhook.WebhookObject" /> to JSON for posting to the URL
+            </summary>
+            <returns>The JSON string</returns>
+        </member>
+        <member name="M:Discord.Webhook.WebhookObject.AddEmbed(Discord.Webhook.EmbedBuilder)">
+            <summary>
+                Adds an embed using the <see cref="T:Discord.Webhook.EmbedBuilder" />
+            </summary>
+            <param name="builder">The builder to use when adding the embed</param>
+            <returns>The updated <see cref="T:Discord.Webhook.WebhookObject" /> with the new embed</returns>
+        </member>
+        <member name="M:Discord.Webhook.WebhookObject.AddEmbed(Discord.Webhook.Embed)">
+            <summary>
+                Adds an embed
+            </summary>
+            <param name="embed">The embed to add to the collection</param>
+            <returns>The updated <see cref="T:Discord.Webhook.WebhookObject" /> with the new embed</returns>
+        </member>
+        <member name="M:Discord.Webhook.WebhookObject.AddEmbed(System.Action{Discord.Webhook.EmbedBuilder})">
+            <summary>
+                Adds an embed using the <see cref="T:Discord.Webhook.EmbedBuilder" /> with an <see cref="T:System.Action" />
+            </summary>
+            <param name="builder">The builder to use when adding the embed</param>
+        </member>
+        <member name="T:Discord.Webhook.Embed">
+            <summary>
+                the embed class
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.title">
+            <summary>
+                the title of the embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.type">
+            <summary>
+                the type of embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.description">
+            <summary>
+                the message in the embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.url">
+            <summary>
+                the url the title links to
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.Color">
+            <summary>
+                the color of the embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.color">
+            <summary>
+                the discord int color of the color you shouldnt see this
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.footer">
+            <summary>
+                the footer of the embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.image">
+            <summary>
+                the image the embed will have
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.thumbnail">
+            <summary>
+                the thumbnail of the embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.video">
+            <summary>
+                any videos the embed will play
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.provider">
+            <summary>
+                the provider of the embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.author">
+            <summary>
+                the author of the embed
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Embed.fields">
+            <summary>
+                the fields the embed can have capped at 25
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Field.name">
+            <summary>
+                the title of the field
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Field.value">
+            <summary>
+                the content of the field
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Field.inline">
+            <summary>
+                whether the embed is inline
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Footer.text">
+            <summary>
+                the footer text
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Footer.icon_url">
+            <summary>
+                the url the icon will have
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Footer.proxy_icon_url">
+            <summary>
+                the proxy_icon_url ima be honest no clue but its in the docs so is here
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Image.url">
+            <summary>
+                the url of the image
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Image.proxy_url">
+            <summary>
+                the proxy_url to the image dont ask me its in the docs (a proxied url of the image)
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Image.height">
+            <summary>
+                the height in pixels the image will be
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Image.width">
+            <summary>
+                the width in pixels the image will be
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Thumbnail.url">
+            <summary>
+                the url to the image
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Thumbnail.proxy_url">
+            <summary>
+                in the docs no idea
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Thumbnail.height">
+            <summary>
+                the height in pixels the image will be
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Thumbnail.width">
+            <summary>
+                the width in pixels the image will be
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Video.url">
+            <summary>
+                the url to the video
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Video.proxy_url">
+            <summary>
+                in the docs no idea
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Video.height">
+            <summary>
+                the height in pixels the videp will be
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Video.width">
+            <summary>
+                the width in pixels the video will be
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Provider.name">
+            <summary>
+                the provider name
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Provider.url">
+            <summary>
+                the url to the provider
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Author.name">
+            <summary>
+                the authors name
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Author.url">
+            <summary>
+                the url the author should link to
+            </summary>
+        </member>
+        <member name="F:Discord.Webhook.Author.icon_url">
+            <summary>
+                the authors icon
+            </summary>
+        </member>
+        <member name="M:Discord.Webhook.DColor.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Creates a new color to send to discord
+                The reason it is not System.Drawing.Color is to ensure compat with the color in the media and to support more
+                people heading forward
+            </summary>
+            <param name="r">The 8-bit integer representing the red value</param>
+            <param name="g">The 8-bit integer representing the green value</param>
+            <param name="b">The 8-bit integer representing the blue value</param>
+        </member>
+        <member name="M:Discord.Webhook.DColor.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+                Creates a new color to send to discord
+                The reason it is not System.Drawing.Color is to ensure compat with the color in the media and to support more
+                people heading forward
+            </summary>
+            <param name="r">The 8-bit integer representing the red value</param>
+            <param name="g">The 8-bit integer representing the green value</param>
+            <param name="b">The 8-bit integer representing the blue value</param>
+        </member>
+    </members>
+</doc>
