@@ -1,4 +1,4 @@
-﻿using Discord.Webhook;
+using Discord.Webhook;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,17 +32,19 @@ namespace MatchAnalyzer
             Console.WriteLine("\nPress Any key to start watching stats");
             Console.ReadKey();
             Console.WriteLine("Anaylzing Stats....");
-            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            string rocketstats = Path.Combine(filePath + "\\bakkesmod\\bakkesmod\\data\\RocketStats");
-            string rank = File.ReadAllText(rocketstats + "\\RocketStats_RankName.txt");
-            string MMR = File.ReadAllText(rocketstats + "\\RocketStats_MMR.txt");
-            string Wins = File.ReadAllText(rocketstats + "\\RocketStats_Win.txt");
-            string Loss = File.ReadAllText(rocketstats + "\\RocketStats_Loss.txt");
-            string Streak = File.ReadAllText(rocketstats + "\\RocketStats_Streak.txt");
+            
 
             while (true)
             {
                 var webhookObject = new WebhookObject();
+
+                string filePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string rocketstats = Path.Combine(filePath + "\\bakkesmod\\bakkesmod\\data\\RocketStats");
+                string rank = File.ReadAllText(rocketstats + "\\RocketStats_RankName.txt");
+                string MMR = File.ReadAllText(rocketstats + "\\RocketStats_MMR.txt");
+                string Wins = File.ReadAllText(rocketstats + "\\RocketStats_Win.txt");
+                string Loss = File.ReadAllText(rocketstats + "\\RocketStats_Loss.txt");
+                string Streak = File.ReadAllText(rocketstats + "\\RocketStats_Streak.txt");
 
                 webhookObject.AddEmbed(builder =>
                 {
