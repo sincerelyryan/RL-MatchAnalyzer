@@ -45,6 +45,8 @@ namespace MatchAnalyzer
                 string Wins = File.ReadAllText(rocketstats + "\\RocketStats_Win.txt");
                 string Loss = File.ReadAllText(rocketstats + "\\RocketStats_Loss.txt");
                 string Streak = File.ReadAllText(rocketstats + "\\RocketStats_Streak.txt");
+                string GameMode = File.ReadAllText(rocketstats + "\\RocketStats_GameMode.txt");
+                string winPercentage = File.ReadAllText(rocketstats + "\\RocketStats_WinPercentage.txt");
 
                 webhookObject.AddEmbed(builder =>
                 {
@@ -52,10 +54,13 @@ namespace MatchAnalyzer
                         .WithColor(Colors.Red)
                         .WithThumbnail("https://files.catbox.moe/8pvnib.png")
                         .AddField("Rank", $"`{rank}`")
+                        .AddField("Game Mode", $"`{GameMode}`")
+                        .AddField("Win Percentage", $"`{winPercentage}`")
                         .AddField("MMR", $"`{MMR}`")
                         .AddField("Streak", $"`{Streak}`")
                         .AddField("Wins", $"`{Wins}`")
                         .AddField("Losses", $"`{Loss}`");
+                    
                 });
 
                 await Webhook.SendAsync(webhook, webhookObject, "MatchAnalyzer", "https://files.catbox.moe/8pvnib.png");
